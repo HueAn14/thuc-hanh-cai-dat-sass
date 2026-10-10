@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực Hành] Cài đặt SASS bằng npm & SASS CLI</title>
+    <!-- Liên kết file CSS được biên dịch tự động từ SCSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>SASS CLI & npm Practice</h1>
+            <p>Thực hành cài đặt và biên dịch SCSS sang CSS bằng SASS Command Line Interface</p>
+            <span class="badge">SASS Version 1.105.1 • Node.js v24.21.0</span>
+        </header>
+
+        <!-- Main Card Grid -->
+        <main class="card-grid">
+            
+            <div class="card">
+                <h2>1. Kiểm tra Môi Trường</h2>
+                <p>Kiểm tra Node.js và npm đã được cài đặt trên hệ thống:</p>
+                <pre>node -v
+npm -v</pre>
+                <p>Kết quả: Node <code>v24.21.0</code>, npm <code>11.19.0</code>.</p>
+            </div>
+
+            <div class="card">
+                <h2>2. Cài Đặt SASS Toàn Cục</h2>
+                <p>Cài đặt gói Dart Sass thông qua npm:</p>
+                <pre>npm install -g sass</pre>
+                <p>Kiểm tra phiên bản cài đặt thành công:</p>
+                <pre>sass --version</pre>
+            </div>
+
+            <div class="card">
+                <h2>3. Biên Dịch Đơn Lẻ (Single File)</h2>
+                <p>Chuyển đổi một tệp SCSS thành file CSS:</p>
+                <pre>sass styles.scss styles.css</pre>
+                <p>Tạo ra tệp <code>styles.css</code> và sourcemap tương ứng.</p>
+            </div>
+
+            <div class="card">
+                <h2>4. Chế Độ Theo Dõi (Watch Mode)</h2>
+                <p>Tự động biên dịch khi có bất kỳ thay đổi nào:</p>
+                <pre>sass styles.scss styles.css --watch</pre>
+                <p>Giúp tiết kiệm thời gian, không cần gõ lệnh thủ công mỗi lần sửa SCSS.</p>
+            </div>
+
+            <div class="card">
+                <h2>5. Biên Dịch Thư Mục (Batch Mode)</h2>
+                <p>Biên dịch toàn bộ cấu trúc thư mục <code>scss/</code> sang <code>css/</code>:</p>
+                <pre>sass scss/:css/ --watch</pre>
+                <p>Hỗ trợ chia nhỏ dự án thành các tệp modular <code>_variables.scss</code>, <code>_mixins.scss</code>.</p>
+            </div>
+
+            <div class="card">
+                <h2>6. Xử Lý Lỗi ExecutionPolicy</h2>
+                <p>Khắc phục lỗi chạy script trên Windows PowerShell:</p>
+                <pre>Set-ExecutionPolicy Unrestricted</pre>
+                <p>Hoặc thực thi trực tiếp thông qua <code>npm.cmd</code> và <code>sass.cmd</code>.</p>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 CodeGym. Hướng dẫn cài đặt và sử dụng SASS CLI hoàn chỉnh.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
